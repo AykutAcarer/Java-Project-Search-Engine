@@ -22,6 +22,7 @@ public class SearchEngine {
 			String ergebnis = "";
 			String ergebnis2 = "";
 			int count = 0;
+			int count2=0;
 			while ((zeile = br.readLine()) != null) {
 
 				Matcher matcher = patt.matcher(zeile);
@@ -32,6 +33,7 @@ public class SearchEngine {
 					ergebnis = "I found the text  "+"'"+ matcher.group() +"'"+ " " + count + ". Zeile"
 							+ "  starting at index  " + matcher.start() + "  and ending at index  " + matcher.end();
 					System.out.println(ergebnis);
+					count2++;
 					found = true;
 				}
 				if (!found) {
@@ -40,6 +42,7 @@ public class SearchEngine {
 				}
 
 			}
+			System.out.println("Total matches "+count2);
 			System.out.println(ergebnis2);
 			br.close();
 		}
