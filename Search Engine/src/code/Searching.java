@@ -1,5 +1,8 @@
 package code;
-
+/**
+ * @author Aykut Acarer
+ * 
+ */
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
